@@ -124,8 +124,8 @@ export function AiopsSlide() {
                 <Radar className="size-4" />
               </div>
               <div className="leading-tight">
-                <p className="font-display text-xs font-semibold text-foreground">BMC Helix Discovery</p>
-                <p className="text-[0.62rem] text-muted-foreground">Continuous · Agentless</p>
+                <p className="font-display text-xs font-semibold text-foreground">BMC Helix Discovery & BCM</p>
+                <p className="text-[0.62rem] text-muted-foreground">Continuous ·Agent-Based & Agentless</p>
               </div>
             </div>
             <div className="flex flex-1 flex-col justify-between gap-1.5">
@@ -139,7 +139,7 @@ export function AiopsSlide() {
                 </div>
               ))}
               <div className="mt-1 grid grid-cols-3 gap-1.5 text-center">
-                {['80K+ Devices', 'Real-time', 'Rich Context'].map((c) => (
+                {['80K+ Devices', 'Secured', 'Rich Context'].map((c) => (
                   <span key={c} className="rounded-md bg-secondary/60 px-1 py-1 text-[0.58rem] font-medium text-muted-foreground">
                     {c}
                   </span>

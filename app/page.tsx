@@ -1,5 +1,6 @@
 import { Deck, type DeckSlide } from '@/components/deck/deck'
 import { AiopsSlide } from '@/components/slides/aiops-slide'
+import { AiopsImageSection } from '@/components/slides/aiops-image-section'
 import {
   TitleSlide,
   PainSlide,
@@ -19,6 +20,7 @@ const slides: DeckSlide[] = [
   { id: 'diagram', label: 'The Solution', node: <DiagramSlide /> },
   { id: 'capabilities', label: 'Capabilities', node: <CapabilitiesSlide /> },
   { id: 'aiops', label: 'AIOps Architecture', node: <AiopsSlide /> },
+  { id: 'aiops-image', label: 'AIOps Image', node: <AiopsImageSection /> },
   { id: 'ladder', label: 'AI Roadmap', node: <LadderSlide /> },
   { id: 'unlock', label: 'What It Unlocks', node: <UnlockSlide /> },
   { id: 'journey', label: 'The Journey', node: <JourneySlide /> },
