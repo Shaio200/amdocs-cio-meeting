@@ -6,12 +6,14 @@ export function SlideFrame({
   title,
   children,
   tint,
+  hideHeader,
 }: {
   index: string
   eyebrow: string
-  title: ReactNode
+  title?: ReactNode
   children: ReactNode
   tint?: 'primary' | 'accent'
+  hideHeader?: boolean
 }) {
   return (
     <section className="relative flex h-full w-full flex-col overflow-hidden px-6 pb-14 pt-8 sm:px-10 lg:px-16 lg:pb-12 lg:pt-10">
@@ -38,23 +40,27 @@ export function SlideFrame({
       />
 
       {/* header */}
-      <header className="shrink-0">
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
-            {index}
-          </span>
-          <span className="h-px flex-1 max-w-24 bg-border" />
-          <span className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-            {eyebrow}
-          </span>
-        </div>
-        <h2 className="mt-3 max-w-4xl text-balance font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-          {title}
-        </h2>
-      </header>
+      {!hideHeader && (
+        <header className="shrink-0">
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
+              {index}
+            </span>
+            <span className="h-px flex-1 max-w-24 bg-border" />
+            <span className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+              {eyebrow}
+            </span>
+          </div>
+          <h2 className="mt-3 max-w-4xl text-balance font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+            {title}
+          </h2>
+        </header>
+      )}
 
       {/* body */}
-      <div className="mt-5 flex min-h-0 flex-1 flex-col lg:mt-7">{children}</div>
+      <div className={`${hideHeader ? 'mt-4' : 'mt-5 lg:mt-7'} flex min-h-0 flex-1 flex-col`}>
+        {children}
+      </div>
 
       {/* footer brand */}
       <footer className="pointer-events-none absolute bottom-4 left-6 flex items-center gap-2 sm:left-10 lg:left-16">

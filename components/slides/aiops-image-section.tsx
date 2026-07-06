@@ -7,25 +7,18 @@ export function AiopsImageSection() {
     <SlideFrame
       index="AIOps"
       eyebrow="Discovery → Intelligent Operations"
-      title={
-        <>
-          AIOps Integration Architecture —{' '}
-          <span className="text-primary">from discovery to autonomous ops.</span>
-        </>
-      }
       tint="accent"
+      hideHeader
     >
-      <div className="flex w-full flex-1 items-center justify-center">
-        <div className="w-full h-full max-w-[1200px]">
-          <div className="relative h-full w-full">
-            <Image
-              src={aiopsImage}
-              alt="AIOps integration architecture infographic"
-              fill
-              style={{ objectFit: 'contain' }}
-              priority={false}
-            />
-          </div>
+      <div className="flex min-h-0 w-full flex-1 items-center justify-center px-2 sm:px-4 lg:px-6">
+        <div className="relative h-full w-full max-w-[1600px]">
+          <Image
+            src={aiopsImage}
+            alt="AIOps integration architecture infographic"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority={false}
+          />
         </div>
       </div>
     </SlideFrame>
