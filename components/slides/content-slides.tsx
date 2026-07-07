@@ -324,7 +324,7 @@ export function LadderSlide() {
 /* 05 — What this unlocks                                              */
 /* ------------------------------------------------------------------ */
 const amplifiers = [
-  { icon: LineChart, title: 'Grafana-powered dashboards', body: 'BMC Helix Dashboards embed Grafana for the most flexible reporting Amdocs has — no rip-and-replace.' },
+  { icon: LineChart, title: 'Grafana-powered dashboards wih Push Notification Reports', body: 'BMC Helix Dashboards embed Grafana for the most flexible observability visualization in the world | Agentic | Proactive' },
   { icon: BotMessageSquare, title: 'Agentic GenAI dashboards', body: 'Build dashboards through a GenAI chat — a direct fit for the CIO\u2019s AI-everywhere mandate.' },
   { icon: ServerCog, title: 'CMDB elevation for Helix ITSM (UTS) and for ServiceNow', body: 'Feed BMC Helix CMDB as well as ServiceNow CMDB via Discovery so ITSM becomes configuration-data-driven — transforming Change, Problem & Incident.' },
   { icon: Lock, title: 'Enforcement & license control', body: 'Enforce configuration, keep licenses on approved assets only, and decommission cleanly ahead of software audits.' },
