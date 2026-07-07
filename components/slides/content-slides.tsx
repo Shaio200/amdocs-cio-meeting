@@ -30,6 +30,7 @@ import {
 } from 'lucide-react'
 import matrixLogo from '../../images/LOGO-MATRIX-1024x430.png'
 import bmcHelixLogo from '../../images/BMCHelix Logo Medium Transparent.png'
+import amdocsLogo from '../../images/amdocs logo.webp'
 import { SlideFrame } from '@/components/deck/slide-frame'
 
 /* ------------------------------------------------------------------ */
@@ -69,27 +70,66 @@ export function TitleSlide() {
           Executive briefing · Prepared for the Amdocs CIO
         </span>
       </div>
-      <h1 className="mt-6 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.04] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-        Modernize discovery for{' '}
-        <span className="text-primary">scale, cloud, and AI.</span>
-      </h1>
-      <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-        Replace fragmented, agent-based legacy discovery with one BMC Helix
-        platform — unifying 80K devices, every cloud, and full service mapping
-        into a single governed CMDB. The foundation your AI strategy runs on.
-      </p>
-      <dl className="mt-10 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
-        {heroStats.map((s) => (
-          <div key={s.label} className="bg-card p-5">
-            <dt className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
-              {s.value}
-            </dt>
-            <dd className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-              {s.label}
-            </dd>
+      <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)] xl:grid-cols-[minmax(0,1.5fr)_minmax(0,0.9fr)]">
+        <div>
+          <h1 className="max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.04] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            Modernize discovery for{' '}
+            <span className="text-primary">scale, cloud, and AI.</span>
+          </h1>
+          <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Replace fragmented, agent-based legacy discovery with one BMC Helix
+            platform — unifying 80K devices, every cloud, and full service mapping
+            into a single governed CMDB. The foundation your AI strategy runs on.
+          </p>
+        </div>
+        <div className="flex items-start justify-center">
+          <div className="relative h-[15rem] w-full max-w-[26rem] sm:h-[17rem] lg:h-[18.5rem]">
+            <Image
+              src={amdocsLogo}
+              alt="Amdocs logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority={false}
+            />
           </div>
-        ))}
-      </dl>
+        </div>
+      </div>
+      <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)] xl:grid-cols-[minmax(0,1.5fr)_minmax(0,0.9fr)]">
+        <dl className="grid max-w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
+          {heroStats.map((s) => (
+            <div key={s.label} className="bg-card p-5">
+              <dt className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
+                {s.value}
+              </dt>
+              <dd className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                {s.label}
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <div className="flex items-center justify-center">
+          <div className="flex items-center gap-24">
+            <div className="relative h-16 w-32 sm:h-18 sm:w-36 lg:h-20 lg:w-40">
+              <Image
+                src={matrixLogo}
+                alt="Matrix logo"
+                fill
+                style={{ objectFit: 'contain' }}
+                priority={false}
+              />
+            </div>
+            <div className="relative h-16 w-32 sm:h-18 sm:w-36 lg:h-20 lg:w-40">
+              <Image
+                src={bmcHelixLogo}
+                alt="BMC Helix logo"
+                fill
+                style={{ objectFit: 'contain' }}
+                priority={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <p className="mt-10 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
         Use arrow keys or scroll to advance
         <ArrowRight className="size-3.5 text-primary" />
