@@ -72,7 +72,7 @@ export function TitleSlide() {
       </div>
       <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)] xl:grid-cols-[minmax(0,1.5fr)_minmax(0,0.9fr)]">
         <div>
-          <h1 className="max-w-4xl text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-balance font-display text-6xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-7xl">
             Modernize discovery for{' '}
             <span className="text-primary">scale, cloud, and AI.</span>
           </h1>
@@ -134,11 +134,6 @@ export function TitleSlide() {
         Use arrow keys or scroll to advance
         <ArrowRight className="size-3.5 text-primary" />
       </p>
-      <footer className="pointer-events-none absolute bottom-5 left-6 flex items-center gap-2 sm:left-10 lg:left-16">
-        <span className="font-display text-sm font-semibold text-foreground">Matrix</span>
-        <span className="text-muted-foreground">·</span>
-        <span className="text-sm text-muted-foreground">BMC Helix</span>
-      </footer>
     </section>
   )
 }
