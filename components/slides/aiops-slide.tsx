@@ -107,7 +107,7 @@ export function AiopsSlide() {
     >
       <div className="flex min-h-0 flex-1 flex-col rounded-2xl border border-border bg-card/60 p-3 sm:p-4 lg:p-5">
         {/* flow label */}
-        <div className="mb-3 flex shrink-0 items-center justify-center gap-2 text-center text-[0.7rem] font-semibold uppercase tracking-wider sm:gap-3 sm:text-xs">
+        <div className="mb-3 flex shrink-0 items-center justify-center gap-2 text-center text-[0.7rem] font-semibold uppercase tracking-wider sm:gap-3 sm:text-xl">
           <span className="text-accent">Intelligent Discovery</span>
           <ArrowRight className="size-3.5 text-primary" />
           <span className="text-foreground">AI/ML Processing</span>
@@ -124,7 +124,7 @@ export function AiopsSlide() {
                 <Radar className="size-4" />
               </div>
               <div className="leading-tight">
-                <p className="font-display text-xs font-semibold text-foreground">BMC Helix Discovery & BCM</p>
+                <p className="font-display text-sm font-semibold text-foreground">BMC Helix Discovery & BCM</p>
                 <p className="text-[0.62rem] text-muted-foreground">Continuous ·Agent-Based & Agentless</p>
               </div>
             </div>
@@ -133,7 +133,7 @@ export function AiopsSlide() {
                 <div key={s.title} className="flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-2.5 py-1.5">
                   <s.icon className="size-4 shrink-0 text-accent" />
                   <div className="leading-tight">
-                    <p className="text-[0.72rem] font-medium text-foreground">{s.title}</p>
+                    <p className="text-[0.9rem] font-medium text-foreground">{s.title}</p>
                     <p className="text-[0.6rem] text-muted-foreground">{s.sub}</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export function AiopsSlide() {
               {engine.map((e) => (
                 <div key={e.label} className="flex flex-col items-center justify-center gap-1 rounded-lg border border-border bg-card/70 px-1 py-2 text-center">
                   <e.icon className="size-4 text-accent" />
-                  <span className="text-[0.6rem] font-medium leading-tight text-foreground">{e.label}</span>
+                  <span className="text-[0.9rem] font-medium leading-tight text-foreground">{e.label}</span>
                 </div>
               ))}
             </div>
@@ -181,7 +181,7 @@ export function AiopsSlide() {
               <div key={o.title} className={`flex flex-1 flex-col justify-center rounded-xl border p-2.5 ${toneMap[o.tone]}`}>
                 <div className="flex items-center gap-2">
                   <o.icon className="size-4 shrink-0" />
-                  <p className="font-display text-xs font-semibold text-foreground">{o.title}</p>
+                  <p className="font-display text-lg font-semibold text-foreground">{o.title}</p>
                 </div>
                 <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 pl-6">
                   {o.items.map((it) => (

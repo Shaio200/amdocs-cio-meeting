@@ -19,7 +19,7 @@ export function SlideFrame({
   hideHeader?: boolean
 }) {
   return (
-    <section className="relative flex h-full w-full flex-col overflow-hidden px-6 pb-14 pt-8 sm:px-10 lg:px-16 lg:pb-12 lg:pt-10">
+    <section className="relative flex h-full w-full flex-col overflow-hidden px-4 pb-8 pt-5 sm:px-6 lg:px-8 lg:pb-6 lg:pt-6">
       {/* backdrop glow */}
       <div
         aria-hidden="true"
@@ -54,14 +54,14 @@ export function SlideFrame({
               {eyebrow}
             </span>
           </div>
-          <h2 className="mt-3 max-w-4xl text-balance font-display text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+          <h2 className="mt-3 max-w-4xl text-balance font-display text-[2rem] font-semibold leading-tight tracking-tight text-foreground sm:text-[2.4rem] lg:text-[2.8rem]">
             {title}
           </h2>
         </header>
       )}
 
       {/* body */}
-      <div className={`${hideHeader ? 'mt-4' : 'mt-5 lg:mt-7'} flex min-h-0 flex-1 flex-col`}>
+      <div className={`${hideHeader ? 'mt-3' : 'mt-3 lg:mt-4'} flex min-h-0 flex-1 flex-col`}>
         {children}
       </div>
 

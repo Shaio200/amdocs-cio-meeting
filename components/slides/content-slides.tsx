@@ -38,8 +38,8 @@ import { SlideFrame } from '@/components/deck/slide-frame'
 /* ------------------------------------------------------------------ */
 const heroStats = [
   { value: '80K+', label: 'Devices in scope' },
-  { value: '14+ yrs', label: 'UTS is powered by with BMC Helix ITSM' },
-  { value: '50K Devices', label: 'Configured by BMC Helix Server Automation' },
+  { value: '16+ yrs', label: 'UTS is powered by with BMC Helix ITSM' },
+  { value: '30K Devices', label: 'Configured by BMC Helix Server Automation' },
   { value: '9+ yrs', label: 'Polaris is powered by BMC Helix CMDB' },
 ]
 
@@ -72,11 +72,11 @@ export function TitleSlide() {
       </div>
       <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)] xl:grid-cols-[minmax(0,1.5fr)_minmax(0,0.9fr)]">
         <div>
-          <h1 className="max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.04] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-7xl lg:text-8xl">
             Modernize discovery for{' '}
             <span className="text-primary">scale, cloud, and AI.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Replace fragmented, agent-based legacy discovery with one BMC Helix
             platform — unifying 80K devices, every cloud, and full service mapping
             into a single governed CMDB. The foundation your AI strategy runs on.
@@ -98,10 +98,10 @@ export function TitleSlide() {
         <dl className="grid max-w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border lg:grid-cols-4">
           {heroStats.map((s) => (
             <div key={s.label} className="bg-card p-5">
-              <dt className="font-display text-2xl font-semibold text-foreground sm:text-3xl">
+              <dt className="font-display text-3xl font-semibold text-foreground sm:text-4xl">
                 {s.value}
               </dt>
-              <dd className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              <dd className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
                 {s.label}
               </dd>
             </div>
@@ -160,18 +160,18 @@ export function PainSlide() {
       eyebrow="The Solution & Its Value"
       title={<>The current state: <span className="text-primary">discovery islands, not a system.</span></>}
     >
-      <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+      <p className="max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         Amdocs has spent years planning to retire aging, agent-based OpenText
         discovery. Four structural problems make replacement urgent.
       </p>
-      <div className="mt-6 grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-4 grid flex-1 grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
         {pains.map((p) => (
-          <div key={p.title} className="flex flex-col rounded-2xl border border-border bg-card p-5">
+          <div key={p.title} className="flex flex-col rounded-2xl border border-border bg-card p-3.5 sm:p-4">
             <div className="grid size-10 place-items-center rounded-lg bg-destructive/12 text-destructive">
               <AlertTriangle className="size-5" />
             </div>
-            <h3 className="mt-4 font-display text-base font-semibold text-foreground">{p.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+            <h3 className="mt-4 font-display text-2xl font-semibold text-foreground">{p.title}</h3>
+            <p className="mt-2 text-[1.08rem] leading-relaxed text-muted-foreground">{p.body}</p>
           </div>
         ))}
       </div>
@@ -184,24 +184,24 @@ export function PainSlide() {
 /* ------------------------------------------------------------------ */
 export function DiagramSlide() {
   const legacy = ['OpenText Island 1', 'OpenText Island 2', 'OpenText Island 3', 'Universal Discovery']
-  const sources = ['SolarWinds (network)', 'SCOM (servers)', 'Flexera (normalize)', 'ServiceNow']
+  const sources = ['SolarWinds (network)', 'Monitoring (servers)', 'UTS Helix ITSM', 'ServiceNow']
   return (
     <SlideFrame
       index="01"
       eyebrow="The Solution & Its Value"
       title={<>One platform to replace the islands — <span className="text-primary">discover, map, enforce.</span></>}
     >
-      <div className="grid min-h-0 flex-1 items-center gap-4 rounded-2xl border border-border bg-card p-4 sm:p-6 lg:grid-cols-[1fr_auto_1.25fr]">
+      <div className="grid min-h-0 flex-1 items-center gap-3 rounded-2xl border border-border bg-card p-3.5 sm:p-4 lg:grid-cols-[1fr_auto_1.25fr]">
         {/* fragmented */}
         <div>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-destructive">Today · Fragmented</span>
-          <p className="mt-1 text-sm text-muted-foreground">Disconnected tools & discovery islands</p>
-          <div className="mt-4 grid grid-cols-2 gap-2.5">
+          <p className="mt-1 text-[1.5rem] text-muted-foreground">Disconnected tools & discovery islands</p>
+          <div className="mt-3 grid grid-cols-2 gap-2">
             {legacy.map((l) => (
-              <div key={l} className="rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-center text-xs font-medium text-foreground/90">{l}</div>
+              <div key={l} className="rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-center text-sm font-medium text-foreground/90">{l}</div>
             ))}
             {sources.map((s) => (
-              <div key={s} className="rounded-lg border border-border bg-secondary/50 px-3 py-2 text-center text-xs font-medium text-foreground/90">{s}</div>
+              <div key={s} className="rounded-lg border border-border bg-secondary/50 px-3 py-2 text-center text-sm font-medium text-foreground/90">{s}</div>
             ))}
           </div>
         </div>
@@ -215,23 +215,24 @@ export function DiagramSlide() {
         {/* unified */}
         <div>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-primary">With BMC Helix · Unified</span>
-          <p className="mt-1 text-sm text-muted-foreground">One hub ingests every source, then feeds governance & AI</p>
+          <p className="mt-1 text-[1.6rem] text-muted-foreground">One hub ingests every source, then feeds governance & AI</p>
           <div className="mt-4 space-y-2.5">
             <div className="glow-primary flex items-center gap-3 rounded-xl border border-primary/40 bg-primary/10 p-3.5">
               <Database className="size-5 shrink-0 text-primary" />
               <div>
-                <p className="text-sm font-semibold text-foreground">Helix Discovery + Client Management + BHII</p>
-                <p className="text-xs text-muted-foreground">Agent · agentless · 3rd-party ingestion</p>
+                <p className="text-[1.08rem] font-semibold text-foreground">Helix Discovery + Client Management + BHII</p>
+                <p className="text-[1rem] text-muted-foreground">Agent · agentless · 3rd-party ingestion</p>
               </div>
             </div>
             <div className="flex justify-center"><ArrowRight className="size-4 rotate-90 text-muted-foreground" /></div>
             <div className="rounded-xl border border-accent/40 bg-accent/10 p-3.5">
-              <p className="text-sm font-semibold text-foreground">BMC Helix CMDB</p>
-              <p className="text-xs text-muted-foreground">Normalized · single source of truth (Polaris + UTS)</p>
+              <p className="text-[1.08rem] font-semibold text-foreground">BMC Helix CMDB</p>
+              <p className="text-[1rem] text-muted-foreground">Normalized · single source of truth (Polaris + UTS)</p>
             </div>
-            <div className="grid grid-cols-2 gap-2.5">
-              <div className="rounded-lg border border-border bg-secondary/50 p-2.5 text-center text-xs font-medium text-foreground/90">Helix ITOM · AIOps</div>
-              <div className="rounded-lg border border-border bg-secondary/50 p-2.5 text-center text-xs font-medium text-foreground/90">ServiceNow & ITSM</div>
+            <div className="grid grid-cols-3 gap-2.5">
+              <div className="rounded-lg border border-border bg-secondary/50 p-2.5 text-center text-sm font-medium text-foreground/90">Helix ITOM · AIOps</div>
+              <div className="rounded-lg border border-border bg-secondary/50 p-2.5 text-center text-sm font-medium text-foreground/90">UTS Helix ITSM</div>
+              <div className="rounded-lg border border-border bg-secondary/50 p-2.5 text-center text-sm font-medium text-foreground/90">ServiceNow & ITSM</div>
             </div>
           </div>
         </div>
@@ -265,8 +266,8 @@ export function CapabilitiesSlide() {
             <div className="grid size-10 place-items-center rounded-lg bg-primary/12 text-primary">
               <c.icon className="size-5" />
             </div>
-            <h3 className="mt-3 font-display text-base font-semibold text-foreground">{c.title}</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
+            <h3 className="mt-3 font-display text-2xl font-semibold text-foreground">{c.title}</h3>
+            <p className="mt-1.5 text-[1.08rem] leading-relaxed text-muted-foreground">{c.body}</p>
           </div>
         ))}
       </div>
@@ -291,16 +292,16 @@ export function LadderSlide() {
       title={<>Discovery isn&apos;t the destination — <span className="text-primary">it&apos;s the launchpad for AI.</span></>}
       tint="accent"
     >
-      <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+      <p className="max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         The same platform that fixes discovery becomes the data foundation for
         Amdocs&apos; AI ambitions. Clean, connected configuration data is what
         makes AIOps and ServiceOps actually work.
       </p>
-      <div className="mt-6 grid min-h-0 flex-1 grid-cols-1 items-stretch gap-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
+      <div className="mt-4 grid min-h-0 flex-1 grid-cols-1 items-stretch gap-2.5 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
         {layers.map((l, i) => (
           <Fragment key={l.title}>
             <div
-              className={`flex flex-col rounded-2xl border p-5 ${l.primary ? 'glow-primary border-primary/40 bg-primary/10' : 'border-border bg-card'}`}
+              className={`flex flex-col rounded-2xl border p-4 sm:p-5 ${l.primary ? 'glow-primary border-primary/40 bg-primary/10' : 'border-border bg-card'}`}
             >
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">{l.step}</span>
@@ -309,8 +310,8 @@ export function LadderSlide() {
               <div className={`mt-4 grid size-11 place-items-center rounded-lg ${l.primary ? 'bg-primary/20 text-primary' : 'bg-accent/15 text-accent'}`}>
                 <l.icon className="size-5" />
               </div>
-              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{l.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{l.body}</p>
+              <h3 className="mt-4 font-display text-2xl font-semibold text-foreground">{l.title}</h3>
+              <p className="mt-2 text-[1.08rem] leading-relaxed text-muted-foreground">{l.body}</p>
             </div>
             {i < layers.length - 1 && (
               <div className="hidden items-center justify-center lg:flex">
@@ -344,13 +345,13 @@ export function UnlockSlide() {
     >
       <div className="grid min-h-0 flex-1 grid-cols-1 items-stretch gap-4 sm:grid-cols-2">
         {amplifiers.map((a) => (
-          <div key={a.title} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 lg:p-6">
+          <div key={a.title} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-3.5 lg:p-4">
             <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-primary/12 text-primary">
               <a.icon className="size-6" />
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-foreground">{a.title}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{a.body}</p>
+              <h3 className="font-display text-2xl font-semibold text-foreground">{a.title}</h3>
+              <p className="mt-1 text-[1.08rem] leading-relaxed text-muted-foreground">{a.body}</p>
             </div>
           </div>
         ))}
@@ -371,7 +372,7 @@ const milestones = [
 ]
 const trust = [
   { icon: Handshake, stat: '20+ years', label: 'Continuous Matrix & BMC partnership with Amdocs' },
-  { icon: Users, stat: 'Trusted teams', label: 'CMDB (Polaris), TrueSight & Helix ITSM (UTS) already live' },
+  { icon: Users, stat: 'Trusted', label: 'CMDB (Polaris) | TrueSight Server Automation | Helix ITSM (UTS) already live' },
   { icon: FileSearch, stat: 'Widest ever', label: 'The most comprehensive discovery POC scope we have run' },
 ]
 
@@ -395,8 +396,8 @@ export function JourneySlide() {
                   </span>
                   <span className="font-mono text-sm font-semibold text-foreground md:mt-4 md:block">{m.year}</span>
                 </div>
-                <h3 className="mt-2 font-display text-sm font-semibold text-foreground">{m.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{m.body}</p>
+                <h3 className="mt-2 font-display text-lg font-semibold text-foreground">{m.title}</h3>
+                <p className="mt-1 text-[1rem] leading-relaxed text-muted-foreground">{m.body}</p>
               </li>
             ))}
           </ol>
@@ -404,14 +405,14 @@ export function JourneySlide() {
         {/* trust */}
         <div className="grid gap-4 sm:grid-cols-3">
           {trust.map((t) => (
-            <div key={t.label} className="rounded-2xl border border-border bg-card p-5">
+            <div key={t.label} className="rounded-2xl border border-border bg-card p-4 sm:p-5">
               <div className="flex items-center gap-3">
                 <div className="grid size-10 place-items-center rounded-lg bg-primary/12 text-primary">
                   <t.icon className="size-5" />
                 </div>
-                <p className="font-display text-xl font-semibold text-foreground">{t.stat}</p>
+                <p className="font-display text-[1.45rem] font-semibold text-foreground">{t.stat}</p>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.label}</p>
+              <p className="mt-2 text-[1rem] leading-relaxed text-muted-foreground">{t.label}</p>
             </div>
           ))}
         </div>
@@ -444,39 +445,39 @@ export function PocSlide() {
       eyebrow="The Proof of Concept"
       title={<>A focused POC to <span className="text-primary">retire the fear factor.</span></>}
     >
-      <div className="grid shrink-0 gap-3 sm:grid-cols-3">
+      <div className="grid shrink-0 gap-2.5 sm:grid-cols-3">
         {timing.map((t) => (
-          <div key={t.label} className="rounded-2xl border border-border bg-card p-4">
+          <div key={t.label} className="rounded-2xl border border-border bg-card p-4 sm:p-5">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <t.icon className="size-4 text-primary" />
               {t.label}
             </div>
-            <p className="mt-2 font-display text-2xl font-semibold text-foreground">{t.value}</p>
-            <p className="mt-0.5 text-xs text-muted-foreground">{t.note}</p>
+            <p className="mt-2 font-display text-[2rem] font-semibold text-foreground">{t.value}</p>
+            <p className="mt-0.5 text-[1rem] text-muted-foreground">{t.note}</p>
           </div>
         ))}
       </div>
-      <div className="mt-3 grid min-h-0 flex-1 gap-3 lg:grid-cols-[1.4fr_1fr]">
-        <div className="flex flex-col rounded-2xl border border-border bg-card p-5 lg:p-6">
-          <h3 className="font-display text-lg font-semibold text-foreground">POC objectives & success criteria</h3>
-          <ul className="mt-4 grid flex-1 content-center gap-3 sm:grid-cols-2">
+      <div className="mt-2.5 grid min-h-0 flex-1 gap-2.5 lg:grid-cols-[1.4fr_1fr]">
+        <div className="flex flex-col rounded-2xl border border-border bg-card p-4 sm:p-5 lg:p-6">
+          <h3 className="font-display text-[1.75rem] font-semibold text-foreground">POC objectives & success criteria</h3>
+          <ul className="mt-3 grid flex-1 content-center gap-2.5 sm:grid-cols-2">
             {objectives.map((o) => (
               <li key={o} className="flex items-start gap-3">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
                   <ListChecks className="size-3" />
                 </span>
-                <span className="text-sm leading-relaxed text-foreground/90">{o}</span>
+                <span className="text-[1.08rem] leading-relaxed text-foreground/90">{o}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="glow-primary flex flex-col justify-between rounded-2xl border border-primary/40 bg-primary/10 p-5 lg:p-6">
+        <div className="glow-primary flex flex-col justify-between rounded-2xl border border-primary/40 bg-primary/10 p-4 sm:p-5 lg:p-6">
           <div>
             <div className="grid size-11 place-items-center rounded-lg bg-primary/20 text-primary">
               <Users2 className="size-5" />
             </div>
-            <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Team & alignment</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <h3 className="mt-4 font-display text-[1.75rem] font-semibold text-foreground">Team & alignment</h3>
+            <p className="mt-2 text-[1.08rem] leading-relaxed text-muted-foreground">
               Expectations are being set jointly with the Amdocs discovery team.
               We bring proven implementation capability and a shared history — so
               the POC starts on solid ground, not from scratch.
@@ -509,13 +510,13 @@ export function ProjectSlide() {
     >
       <div className="grid min-h-0 flex-1 grid-cols-2 items-stretch gap-3 md:grid-cols-3 lg:grid-cols-5">
         {phases.map((p, i) => (
-          <div key={p.phase} className={`flex flex-col rounded-2xl border p-4 ${i === 0 ? 'glow-primary border-primary/40 bg-primary/10' : 'border-border bg-card'}`}>
+          <div key={p.phase} className={`flex flex-col rounded-2xl border p-3 sm:p-3.5 ${i === 0 ? 'glow-primary border-primary/40 bg-primary/10' : 'border-border bg-card'}`}>
             <span className="font-mono text-xs uppercase tracking-[0.15em] text-primary">{p.phase}</span>
             <span className="mt-0.5 text-xs text-muted-foreground">{p.window}</span>
-            <h3 className="mt-3 font-display text-sm font-semibold text-foreground">{p.title}</h3>
+            <h3 className="mt-3 font-display text-xl font-semibold text-foreground">{p.title}</h3>
             <ul className="mt-3 space-y-2">
               {p.items.map((it) => (
-                <li key={it} className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground">
+                <li key={it} className="flex items-start gap-2 text-[1rem] leading-relaxed text-muted-foreground">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary" />
                   {it}
                 </li>
