@@ -1,4 +1,7 @@
 import type { ReactNode } from 'react'
+import Image from 'next/image'
+import matrixLogo from '../../images/LOGO-MATRIX-1024x430.png'
+import bmcHelixLogo from '../../images/BMCHelix Logo Medium Transparent.png'
 
 export function SlideFrame({
   index,
@@ -63,12 +66,27 @@ export function SlideFrame({
       </div>
 
       {/* footer brand */}
-      <footer className="pointer-events-none absolute bottom-4 left-6 flex items-center gap-2 sm:left-10 lg:left-16">
-        <span className="font-display text-sm font-semibold text-foreground">
-          Matrix
-        </span>
-        <span className="text-muted-foreground">·</span>
-        <span className="text-sm text-muted-foreground">BMC Helix</span>
+      <footer className="pointer-events-none absolute bottom-4 left-6 flex items-center gap-3 sm:left-10 lg:left-16">
+        <div className="flex h-4 items-center gap-2">
+          <div className="relative h-full w-[4.5rem] sm:w-[5rem] lg:w-[5.5rem]">
+            <Image
+              src={matrixLogo}
+              alt="Matrix logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority={false}
+            />
+          </div>
+          <div className="relative h-full w-[5rem] sm:w-[5.5rem] lg:w-[6rem]">
+            <Image
+              src={bmcHelixLogo}
+              alt="BMC Helix logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority={false}
+            />
+          </div>
+        </div>
       </footer>
     </section>
   )

@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import Image from 'next/image'
 import {
   Activity,
   AlertTriangle,
@@ -27,6 +28,8 @@ import {
   Users2,
   Workflow,
 } from 'lucide-react'
+import matrixLogo from '../../images/LOGO-MATRIX-1024x430.png'
+import bmcHelixLogo from '../../images/BMCHelix Logo Medium Transparent.png'
 import { SlideFrame } from '@/components/deck/slide-frame'
 
 /* ------------------------------------------------------------------ */
@@ -522,9 +525,26 @@ export function CloseSlide() {
           Approve the POC kickoff
           <ArrowRight className="size-4" />
         </span>
-        <span className="rounded-lg border border-border bg-secondary/40 px-5 py-3 text-sm font-semibold text-foreground">
-          Matrix · BMC Helix
-        </span>
+        <div className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-4 py-2">
+          <div className="relative h-4 w-[4.5rem] sm:w-[5rem] lg:w-[5.5rem]">
+            <Image
+              src={matrixLogo}
+              alt="Matrix logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority={false}
+            />
+          </div>
+          <div className="relative h-4 w-[5rem] sm:w-[5.5rem] lg:w-[6rem]">
+            <Image
+              src={bmcHelixLogo}
+              alt="BMC Helix logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority={false}
+            />
+          </div>
+        </div>
       </div>
     </section>
   )
