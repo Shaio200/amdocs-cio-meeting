@@ -245,7 +245,7 @@ const capabilities = [
   { icon: Network, title: 'Service mapping', body: 'Blueprint technology maps business services in minutes and keeps them current as the environment changes.' },
   { icon: Boxes, title: 'CMDB consolidation', body: 'All sources normalized and consolidated into the BMC Helix CMDB already used by the Polaris project.' },
   { icon: Workflow, title: 'OOTB ingestion (BHII)', body: 'BMC Helix Intelligent Integration ingests topology & assets from SolarWinds, SCOM and dozens more.' },
-  { icon: ShieldCheck, title: 'Optional : Enforcement & Compliance', body: 'Install/remove software, block unapproved usage, track last-used, and decommission before audits.' },
+  { icon: ShieldCheck, title: 'Enforcement & Compliance & App Usage & Automations & Store', body: 'Install/remove software, block unapproved usage, track last-used, and decommission before audits. Automate Actions. App Store. Remote Control and more' },
 ]
 
 export function CapabilitiesSlide() {
