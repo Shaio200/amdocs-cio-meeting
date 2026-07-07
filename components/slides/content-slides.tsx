@@ -34,9 +34,9 @@ import { SlideFrame } from '@/components/deck/slide-frame'
 /* ------------------------------------------------------------------ */
 const heroStats = [
   { value: '80K+', label: 'Devices in scope' },
-  { value: '3', label: 'Clouds unified' },
-  { value: '20+ yrs', label: 'Amdocs partnership' },
-  { value: '1', label: 'Governed CMDB' },
+  { value: '14+ yrs', label: 'UTS is powered by with BMC Helix ITSM' },
+  { value: '50K Devices', label: 'Configured by BMC Helix Server Automation' },
+  { value: '9+ yrs', label: 'Polaris is powered by BMC Helix CMDB' },
 ]
 
 export function TitleSlide() {
@@ -204,9 +204,9 @@ const capabilities = [
   { icon: Cpu, title: 'Agent-based discovery', body: 'BMC Helix Client Management tracks servers & clients at massive scale, including internet-connected endpoints.' },
   { icon: Cloud, title: 'Agentless cloud & serverless', body: 'BMC Helix Discovery covers PaaS, storage, network, pods & containers across AWS, Azure and GCP.' },
   { icon: Network, title: 'Service mapping', body: 'Blueprint technology maps business services in minutes and keeps them current as the environment changes.' },
-  { icon: ShieldCheck, title: 'Enforcement & compliance', body: 'Install/remove software, block unapproved usage, track last-used, and decommission before audits.' },
   { icon: Boxes, title: 'CMDB consolidation', body: 'All sources normalized and consolidated into the BMC Helix CMDB already used by the Polaris project.' },
   { icon: Workflow, title: 'OOTB ingestion (BHII)', body: 'BMC Helix Intelligent Integration ingests topology & assets from SolarWinds, SCOM and dozens more.' },
+  { icon: ShieldCheck, title: 'Optional : Enforcement & Compliance', body: 'Install/remove software, block unapproved usage, track last-used, and decommission before audits.' },
 ]
 
 export function CapabilitiesSlide() {
@@ -287,7 +287,7 @@ export function LadderSlide() {
 const amplifiers = [
   { icon: LineChart, title: 'Grafana-powered dashboards', body: 'BMC Helix Dashboards embed Grafana for the most flexible reporting Amdocs has — no rip-and-replace.' },
   { icon: BotMessageSquare, title: 'Agentic GenAI dashboards', body: 'Build dashboards through a GenAI chat — a direct fit for the CIO\u2019s AI-everywhere mandate.' },
-  { icon: ServerCog, title: 'CMDB elevation for ServiceNow', body: 'Feed ServiceNow CMDB via Discovery so ITSM becomes configuration-data-driven — transforming Change, Problem & Incident.' },
+  { icon: ServerCog, title: 'CMDB elevation for Helix ITSM (UTS) and for ServiceNow', body: 'Feed BMC Helix CMDB as well as ServiceNow CMDB via Discovery so ITSM becomes configuration-data-driven — transforming Change, Problem & Incident.' },
   { icon: Lock, title: 'Enforcement & license control', body: 'Enforce configuration, keep licenses on approved assets only, and decommission cleanly ahead of software audits.' },
 ]
 
@@ -386,10 +386,10 @@ const timing = [
   { icon: ListChecks, label: 'Scope', value: 'Widest ever', note: 'Deep, wide use-case set' },
 ]
 const objectives = [
-  'Validate agent-based discovery at scale (80K+ devices)',
+  'Validate agent-based and agetnless discovery at amdocs and "customer" network',
   'Prove agentless coverage for cloud & serverless',
   'Demonstrate service mapping with Blueprints',
-  'Show 3rd-party ingestion via BHII (SolarWinds, SCOM)',
+  'Prove Discovery flexibility and extensibility',
   'Consolidate & normalize into BMC Helix CMDB',
   'Preview dashboards, enforcement & AIOps readiness',
 ]
